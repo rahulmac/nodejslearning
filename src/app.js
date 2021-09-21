@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const request = require('request')
 
 const app = express()
+const port = process.env.PORT || 3002
 
 //domain name - app.com
 // url app.com/about
@@ -103,6 +104,6 @@ app.get('*', (req, res) => {
     res.render('404')
 })
 
-app.listen(3001, () => {
-    console.log('server started at port 3000')
+app.listen(port, () => {
+    console.log('server started at port '+port)
 })
